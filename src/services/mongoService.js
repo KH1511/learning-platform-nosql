@@ -1,5 +1,5 @@
 // Question: Pourquoi créer des services séparés ?
-// Réponse: 
+// Réponse: Pour encapsuler les interactions avec la base de données, améliorer la réutilisabilité et réduire le couplage entre les contrôleurs et la base de données.
 
 const { ObjectId } = require('mongodb');
 

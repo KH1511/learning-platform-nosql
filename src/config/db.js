@@ -1,7 +1,7 @@
 // Question : Pourquoi créer un module séparé pour les connexions aux bases de données ?
-// Réponse : 
+// Réponse : Pour centraliser la logique de connexion, réduire la duplication de code, et faciliter la maintenance ainsi que le débogage. 
 // Question : Comment gérer proprement la fermeture des connexions ?
-// Réponse : 
+// Réponse :  Il est crucial de capturer les signaux système comme SIGTERM et SIGINT pour fermer proprement les connexions MongoDB et Redis en appelant leurs méthodes de fermeture (close). Cela empêche les fuites de ressources et garantit une libération correcte des connexions.
 
 const { MongoClient } = require('mongodb');
 const redis = require('redis');
