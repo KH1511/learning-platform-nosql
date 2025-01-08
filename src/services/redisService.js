@@ -6,8 +6,17 @@
 // Fonctions utilitaires pour Redis
 async function cacheData(key, data, ttl) {
     // TODO: Implémenter une fonction générique de cache
+    try {
+      await client.set(key, JSON.stringify(data), {
+        EX: ttl
+      });
+      console.log(`Data cached with key: ${key}`);
+    } catch (error) {
+      console.error('Error caching data:', error);
+    }
   }
   
   module.exports = {
     // TODO: Exporter les fonctions utilitaires
+    cacheData
   };
