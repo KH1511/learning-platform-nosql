@@ -3,20 +3,37 @@
 
 const { ObjectId } = require('mongodb');
 
+
 // Fonctions utilitaires pour MongoDB
 async function findOneById(collection, id) {
   // TODO: Implémenter une fonction générique de recherche par ID
   try {
-    const result = await collection.findOne({ _id: new ObjectId(id) });
+    if (!ObjectId.isValid(id)) {
+      throw new Error("Invalid ID format");
+    }
+    const objectId = ObjectId.createFromHexString(id);
+    const result = await collection.findOne({ _id: objectId });
     return result;
   } catch (error) {
-    console.error('Error finding document by ID:', error);
+    console.error("Error finding document by ID:", error);
     throw error;
   }
 }
 
+const insertOne = async (collection, data) => {
+  try {
+    const result = await collection.insertOne(data);
+    // Récupérer l'objet inséré en utilisant l'ID inséré
+    const insertedDocument = await collection.findOne({ _id: result.insertedId });
+    return insertedDocument;
+  } catch (error) {
+    console.error("Error inserting document:", error);
+    throw error;
+  }
+}
 // Export des services
 module.exports = {
   // TODO: Exporter les fonctions utilitaires
-  findOneById
+  findOneById,
+  insertOne
 };
