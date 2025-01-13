@@ -1,6 +1,7 @@
 # Projet de fin de module NoSQL
 
-  ***********************installation et lancement du projet*************************************
+# Installation et lancement du projet
+
 -> Cloner le dépôt par les commandes suivantes:
 
 git clone https://github.com/KH1511/learning-platform-nosql.git
@@ -17,24 +18,43 @@ REDIS_URI=redis://127.0.0.1:6379
 PORT=3000
 
 
-************************Structure du Projet****************************
+# Structure du Projet
+
 ├── src
+
 │   ├── config
+
 │   │   ├── db.js                ### connexion aux bases de données
+
 │   │   ├── env.js               ### Validation des variables d'environnement
+
 │   ├── controllers
+
 │   │   ├── courseController.js  ### Contrôleur pour les fonctions qui ont relation avec le cours (creation...)
+
 │   ├── routes
+
 │   │   ├── courseRoutes.js      ### Routes pour les fonctions des cours
+
 │   ├── services
+
 │   │   ├── mongoService.js      ### Pour les services de MongoDB
+
 │   │   ├── redisService.js      ### Pour les services de Redis
+
 │   ├── app.js                   ### Point d'entrée de l'application (pour executer l'application)
+
 ├── .env                         ### Fichier de configuration des variables d'environnement
+
 ├── .gitignore                   ### Fichier pour ignorer des fichiers et des dossiers particuliers
+
 ├── [package-lock.json]          ### Fichier généré automatiquement par npm, contient les versions exactes des dépendances
+
 ├── [package.json]               ### Contient les dépendances et scripts du projet
+
 └── [README.md]                  ### Documentation du projet
+
+# Les Choix Techniques 
 
    "dotenv": "^16.4.7"  -> Pour la gestion des variables d'environnement, permettant de stocker les configurations sensibles comme les clés API ou les mots de passe dans des fichiers `.env`, afin de sécuriser l'application.
    
@@ -48,7 +68,8 @@ PORT=3000
 
    Et pour tester le fonctionnement de l'application, j'ai utilise l'outil : Postman
 
-   ************* Les réponses aux questions posées dans les commentaires *******************
+   # Les réponses aux questions posées dans les commentaires
+
    Pourquoi créer un module séparé pour les connexions aux bases de données ?
      ->Pour centraliser la logique de connexion, réduire la duplication de code, et faciliter la maintenance ainsi que le débogage. 
 
@@ -99,7 +120,8 @@ PORT=3000
    Pourquoi utiliser des variables d'environnement ?
         ->Les variables d'environnement permettent de garder les informations sensibles hors du code source. Elles facilitent la gestion des configurations spécifiques à chaque environnement (développement, test, production) tout en renforçant la sécurité et la flexibilité.
 
-************************* Lancement et tests***********************************
+# Lancement et tests 
+
    ->Lancement de l'application a l'aide de la commande "node ./src/app.js"
    ![Server](/images/server1.png)
    
@@ -107,10 +129,10 @@ PORT=3000
    ![Create course](/images/insertion%20d'un%20cours.png)
 
    -> Get course by id :
-   ![Get course by id](/images/get-by-id.png)
+   ![Get course by id](/images/get%20by%20Id.png)
 
    -> Get Stats :
-   ![Get Stats](/images/get-stats.png)
+   ![Get Stats](/images/get%20Stats.png)
 
    -> Server :
    ![Server Status](/images/server.png)
