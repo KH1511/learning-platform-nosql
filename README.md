@@ -101,17 +101,17 @@ PORT=3000
 
 ************************* Lancement et tests***********************************
    ->Lancement de l'application a l'aide de la commande "node ./src/app.js"
-   c:\Users\pc\Desktop\Docs\Cours CCN\S3\XML et Framework\MongoDB\server1.png
+   ![Server](/images/server1.png)
    
    -> Create course : 
-   c:\Users\pc\Desktop\Docs\Cours CCN\S3\XML et Framework\MongoDB\insertion d'un cours.png
+   ![Create course](/images/insertion%20d'un%20cours.png)
 
    -> Get course by id :
-   c:\Users\pc\Desktop\Docs\Cours CCN\S3\XML et Framework\MongoDB\get by Id.png
+   ![Get course by id](/images/get-by-id.png)
 
    -> Get Stats :
-   c:\Users\pc\Desktop\Docs\Cours CCN\S3\XML et Framework\MongoDB\get Stats.png
+   ![Get Stats](/images/get-stats.png)
 
    -> Server :
-   c:\Users\pc\Desktop\Docs\Cours CCN\S3\XML et Framework\MongoDB\server.png
+   ![Server Status](/images/server.png)
 

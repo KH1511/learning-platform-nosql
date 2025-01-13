@@ -1,9 +1,9 @@
 # Compléter ici !!!!???
 
 node_modules
-# Dossier d'outils de développement
-.vscode/
-# Fichiers d'environnement
 .env
+*.log
+!images/
+
 # Dépendances locales pour le projet 
 .npm/
